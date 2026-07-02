@@ -14,7 +14,7 @@ logging.info("Iniciando proceso de carga a PostgreSQL...")
 # 2. CONEXIÓN A LA BASE DE DATOS
 # ==========================================
 # REEMPLAZA 'TU_CONTRASEÑA_AQUI' POR LA CLAVE QUE CREASTE (ej: postgres o admin)
-db_url = 'postgresql://postgres:admin@localhost:5432/telco_db'
+db_url = 'postgresql://postgres:admin@host.docker.internal:5432/telco_db'
 engine = create_engine(db_url)
 
 # ==========================================
@@ -46,4 +46,4 @@ try:
     
 except Exception as e:
     logging.error(f"Error durante la carga de datos: {e}")
-    print(f"Ocurrió un error. Revisa el archivo carga_datos.log para más detalles.")
+    print(f"Ocurrió un error: {e}")
