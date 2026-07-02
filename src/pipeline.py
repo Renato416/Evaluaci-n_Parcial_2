@@ -12,7 +12,7 @@ from sklearn.preprocessing import StandardScaler
 # 2. CARGA Y EXPLORACIÓN DE DATOS
 # ==========================================
 print("\n--- INICIANDO PIPELINE: CARGA DE DATOS ---")
-df = pd.read_csv('../Data/Telco-Customer-Churn.csv')      
+df = pd.read_csv('Data/Telco-Customer-Churn.csv')      
 print(df.head())
 
 print("\n--- INFORMACIÓN GENERAL ---")
@@ -41,6 +41,9 @@ duplicados = df.duplicated().sum()
 print(f"Filas duplicadas encontradas: {duplicados}")
 df = df.drop_duplicates()
 print(f"Tamaño del dataset tras eliminar duplicados: {df.shape}")
+
+print("\n--- GUARDANDO DATASET VALIDADO ---")
+df.to_csv('Data/validated/telco_clean.csv', index=False)
 
 # ==========================================
 # 4. VISUALIZACIONES (Comentadas para Docker)
