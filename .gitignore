@@ -1,0 +1,29 @@
+# --- Entornos Virtuales de Python ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Caché de Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# --- Archivos de Auditoría / Logs ---
+*.log
+carga_datos.log
+
+# --- Datos Locales / Archivos Pesados ---
+# Ignoramos la carpeta de datos validados para no saturar el repositorio Git
+Data/validated/
+
+# --- Configuraciones del Editor (Opcional) ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
